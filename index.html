@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggler.js">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Cinzel Decorative">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Gruppo">
+    <title>Marketing Portfolio</title>
+
+    <link rel="stylesheet" href="animate.js">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $("#switch").click(function(){
+            $("#menu").toggle();
+          });
+        });
+        </script>
+
+    <!--Styling for Column (First Row)-->
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
+      
+      .header {
+        text-align: center;
+        padding: 32px;
+        font-family: Century Gothic;
+        font-weight: 200;
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+      }
+
+      /* Styling for Column1 */
+        
+        .row1 {
+          display: flex;
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+        
+        /* Create four equal columns that sits next to each other */
+        .column1 {
+          flex: 50%;
+          max-width: 50%;
+          padding: 0 4px;
+        }
+        
+        .column1 img {
+          margin-top: 8px;
+          vertical-align: middle;
+        }
+        
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 800px) {
+          .column1 {
+            flex: 100%;
+            max-width: 100%;
+          }
+
+          .banner-heading {
+            font-size: 6vw;
+          }
+         }
+          
+          /* Responsive layout - makes a two column-layout instead of four columns */
+          @media (max-width: 800px) {
+            .column {
+              flex: 50%;
+              max-width: 50%;
+            }
+          }
+          
+          /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+          @media (max-width: 600px) {
+            .column {
+              flex: 100%;
+              max-width: 100%;
+            }
+          }
+        /* End of Styling for Column1 */
+      
+      /* Responsive layout - makes a two column-layout instead of four columns */
+      @media (max-width: 800px) {
+        .column {
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media (max-width: 600px) {
+        .column {
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+      </style>
+
+        
+</head>
+<body>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script>
+
+    <!--Branding (Logo)-->
+    <div class="logo-div">
+      <img class="my-logo" src="images/software-engineer-logo-icon.png" alt="My Logo">
+      <h1 class="logo">Anthony Lewis</h1>
+    </div>
+    <p class="logo-p">Software Engineer</p>
+
+    <!--Hidden Menu-->
+
+    <section class="side-section">
+      <div class="hidden">
+        <div id="menu-links" class="hide">
+          <h1 class="menu-h1"><a href="index.html">HOME</a></h1>
+          <h1 class="menu-h1"><a href="about.html">ABOUT</a></h1>
+          <h1 class="menu-h1"><a href="contact.html">CONTACT</a></h1>
+        </div>
+        <div class="menu-icon-div" style="height: 30px;">
+          <img id="lines" src="menu.png" alt="lines" onClick="main()">
+        </div>
+    </div>
+    </section>
+
+    <!--Beginning of Banner-->
+
+    <section>
+      <div class="cover-image">
+        <h1 class="banner-heading" style="">
+          DONE FOR YOU LEAD GENERATION
+        </h1>
+        <h2 class="banner-sub-heading" style="">We are prepared to meet your company's needs. We have demonstrated proficiency in every procedure that a contemporary corporation goes through.
+        </h2>
+      </div>
+    </section>
+    
+    <script>
+      var image_tracker = 'menu';
+
+<!--Menu Icon Changing Images-->
+
+      function change() {
+        var image = document.getElementById('lines'); 
+        
+         if(image_tracker == 'menu') {
+            image.src='arrow.png';
+            image_tracker = 'arrow';
+          }
+            else {
+              image.src='menu.png';
+              image_tracker='menu';
+            }
+        } 
+
+        const targetDiv = document.querySelector("#menu-links");
+        const isShow = true;
+    // const targetDiv = document.getElementById("menu-links");
+    // const img = document.getElementById("lines");
+    // function show() {
+    //   if (targetDiv.style.display !== "none") {
+    //     targetDiv.style.display = "none";
+    //   } else {
+    //     targetDiv.style.display = "block";
+    //   }
+    // };
+
+    function show() {
+      targetDiv.classList.toggle("hide")
+    }
+
+    function main() {
+        change();
+        show();
+      }
+  </script>
+  <!-- <section class="banner-section"> -->
+  <section class="bg-section">
+    <div class="banner">
+      
+    </div>
+  </section>
+  
+    <!-- Beginning of Main section -->
+
+    
+
+      <!--End of Styling for Column (First Row)-->
+      
+      <!-- Header After Banner-->
+
+      <div class="header">
+        <h1>Business Management</h1>
+        <p>Services We Provide</p>
+      </div>
+
+      <!--End of Header After Banner-->
+
+      <!--First Row (4 images)-->
+
+      <!-- Description Grid -->
+      <div class="row gap"> 
+        
+           
+          
+          <!-- <div id="first-image-h"> -->
+          <div class="column gap border">
+            <img class="icons checkmark-image" src="images/checkmark.jpg" alt="Check Mark">
+            <h3 class="first-image-h" style="font-size:3.vw; text-align: center; color: black;"> Branding</h3>
+              <br>
+              <hr class="hr">
+            <p class="first-image-hp" style="font-size:2.vw;">
+              If you choose our interim services, we will convert qualified leads into paying customers.
+            </p>
+          </div>
+
+          <div class="column gap border">
+            <img class="icons" src="images/exit.png" alt="Check Mark">
+            <h3 class="first-image-h" style="font-size:3.vw; text-align: center; color: black;"> Exit planning</h3>
+              <br>
+              <hr>
+            <p class="first-image-hp"style="font-size:2.vw;">
+              With us, exit planning entails creating a strategic roadmap five to ten years before you shift gears.
+            </p>
+          </div> 
+           
+          <div class="column gap border">
+            <img class="icons" src="images/research.jpg" alt="Check Mark" style="width: 28.3%;">
+            <h3 class="first-image-h" style="font-size:3.vw; text-align: center; color: black;"> Market research</h3>
+              <br>
+              <hr>
+            <p class="first-image-hp" style="font-size:2.vw;">
+              Without a strong marketing team, it's impossible to succeed in business today, regardless of the industry.
+            </p> 
+          </div>
+          
+          <div class="column gap border">
+            <img class="icons" src="images/strategic.jpg" alt="Strategic Planning Icon">
+            <h3 class="first-image-h" style="font-size:3.vw; text-align: center; color: black;"> Strategic planning</h3>
+              <br>
+              <hr>
+            <p class="first-image-hp"  style="font-size:2.vw;">
+              Building a strategy for strategic growth and expansion is essential because playing the tactics game will be essential.
+            </p>
+          </div>
+
+        
+      </div>
+        
+        
+
+<!--End of First Row-->
+      
+     
+
+<!--End of First Row-->
+
+<!--Beginning of Second Row and All Large Images-->
+      
+      <!--Photo Grid -->
+      <div class="row1"> <!--First Two Images-->
+        <div class="column1">
+          <img src="images/home-image1.png" style="width:100%; height:100%";>
+          <h1 id="image-h1" style="color:white">Satisfaction Guaranteed </h1>
+        </div>
+     
+           
+
+        <div class="column1">
+          <img src="images/home-image2.jpg" style="width:100%; height:100%";>
+	  <h1 id="image-h1-two" style="color:white">Quick Support For All Clients </h1>
+        </div>
+      </div>
+
+      <!--Second Two Images-->
+      <div class="row1">    
+        <div class="column1">
+          <img src="images/home-image3.jpg" style="width:100%; height:100%";>
+ 	  <h1 id="image-h1-three" style="color:white">Professional Approach </h1>
+        </div>
+      
+        
+        <div class="column1">
+          <img src="images/home-image4.jpg" style="width:100%; height:100%";>
+ 	  <h1 id="image-h1-four" style="color:white">End-to-End Guidance </h1> 
+        </div>
+      </div> 
+
+      <!--Guarantee-->
+
+      <div class="header1 guarantee">
+        <h1>$2,000 Guarantee</h1>
+        <p>You will make more than $2000 of new revenue in less than six months, or your next six months are free.</p>
+        <p>This is more than the cost of membership, even with the lead generation monthly plan.</p>  
+      </div>
+
+      <!--End of Guarantee-->
+
+      <!-- Pricing-->
+
+      <div class="header">
+        <h1>Lead Generation Success Packages</h1>  
+      </div>
+
+      <div class="row-pricing pricing"> 
+        <div class="column box package1" style="padding-top: 10px;">
+          <h1 style="font-size: 1.1em; text-align: center; font-weight: 200;">Lead Generation Plan</h1>
+          <h3 style="text-align: center;">$297 per month</h3>
+          <br>
+          <ul class="pricing-ul">
+            <img class="lead-li-1" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-1">Website and branding</li>
+            <br>
+            <img class="lead-li-2" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-2">Hosting, maintenance, and support</li>
+            <br>
+            <img class="lead-li-3" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-3">Business profile management</li>
+            <br>
+            <img class="lead-li-4" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-4">Local SEO essentials</li>
+            <br>
+            <img class="lead-li-5" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-5">Local service ads</li>
+          </ul>
+          <br>
+          <button class="lead-generation-button" type="button" name="button"><a href="#">Let's Do It!</a></button>
+        </div>
+        
+        <div class="column box package2" style="padding-top: 10px;">
+          <h1 style="font-size: 1.1em; text-align: center; font-weight: 200;">Business</h1>
+          <h3 style="text-align: center;">$1497</h3>
+          <p style="text-align: center;">(One time payment)</p>
+          <br>
+          <ul class="pricing-ul">
+            <img class="lead-li-1" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-1">Up to 10 web pages</li>
+            <br>
+            <img class="lead-li-2" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-2">Content</li>
+            <br>
+            <img class="lead-li-3" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-3">Images</li>
+            <br>
+            <img class="lead-li-4" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-4">Video Included</li>
+            <br>
+            <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-5">VideoVoice Over</li>
+            <br>
+            <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+            <li class="lead-li-5">Video Editing</li>
+            <br>
+              <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">Logo</li>
+          </ul>
+          <br>
+          <button type="button">Let's Do It!</button>
+        </div> 
+        
+          <div class="column box package" style="padding-top: 10px;">
+            <h1 style="font-size: 1.1em; text-align: center; font-weight: 200; max-width: 24%; margin-left: 120px;">Professional</h1>
+            <h3 style="text-align: center;">$3,000</h3>
+            <p style="text-align: center;">(One time payment)</p>
+            <br>
+            <ul class="pricing-ul">
+              <img class="lead-li-1" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-1">Up to 10 web pages</li>
+              <br>
+              <img class="lead-li-2" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-2">Content</li>
+              <br>
+              <img class="lead-li-3" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-3">Images</li>
+              <br>
+              <img class="lead-li-4" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-4">Video Included</li>
+              <br>
+              <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">VideoVoice Over</li>
+              <br>
+              <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">Video Editing</li>
+              <br>
+              <img class="lead-li-5" src="images/x-mark.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">Logo</li>
+            </ul> 
+            <br>
+            <button type="button">Let's Do It!</button>
+        </div>
+        
+        <div class="column box package4" style="padding-top: 10px;">
+          <h1 style="font-size: 1.1em; text-align: center; font-weight: 200;">Corporate</h1>
+            <h3 style="text-align: center;">$4,500</h3>
+            <p style="text-align: center;">(One time payment)</p>
+            <br>
+            <ul class="pricing-ul">
+              <img class="lead-li-1" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-1">Up to 10 web pages</li>
+              <br>
+              <img class="lead-li-2" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-2">Content</li>
+              <br>
+              <img class="lead-li-3" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-3">Images</li>
+              <br>
+              <img class="lead-li-4" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-4">Video Included</li>
+              <br>
+              <img class="lead-li-5" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">VideoVoice Over</li>
+              <br>
+              <img class="lead-li-5" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">Video Editing</li>
+              <br>
+              <img class="lead-li-5" src="images/checkmark-box.jpg" alt="Check Mark" style="width: 20px; margin-bottom: 10px";>
+              <li class="lead-li-5">Logo (Bonus)</li>
+            </ul>
+            <br>
+            <button type="button">Let's Do It!</button>
+      </div>
+      </div>
+
+      <div class="header">
+        <h1>Meet The Teams</h1>
+        <p>A Dynamic Team That Makes Up The Complete Package To Convert Your Leads into Loyal Lifetime Customers</p>
+      </div>
+
+       <!-- Photo Grid -->
+       <div class="row"> 
+        <div class="column">
+          <img src="images/dept-image1.jpg" style="width:100%; height:100%";> 
+          
+          <div id="first-image-h3">
+            <h3 class="first-image-h3">
+              Marketing and Branding
+            </h3>
+            <h2 id="first-image-h2"></h2>
+          </div>
+        </div>
+        
+        <div class="column">
+          <img src="images/software-engineer-team.png" style="width:100%; height:100%";> 
+
+          <div id="first-image-h3">
+            <h3 class="first-image-h3">Engineers</h3>
+          </div>
+        </div> 
+         
+        <div class="column">
+          <img src="images/dept-image3.jpg" style="width:100%; height:100%";> 
+          <div id="first-image-h3">
+            <h3 class="first-image-h3">Profile Management</h3>
+          </div> 
+        </div>
+        
+        <div class="column">
+          <img src="images/dept-image4.png" style="width:100%; height:100%";>
+
+          <div id="first-image-h3">
+            <h3 class="first-image-h3">Search Engine Optimizantion</h3>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          $("#image-h1-four").click(function(){
+            $("#model-homes-h3").slideDown();
+          });
+          $(".about-arrow").click(function(){
+            $("#model-homes-h3").slideUp();
+          });  
+        });
+        </script>
+
+      <!--End of Second Row and All Large Images-->
+
+
+<!--Images Sliding Animation jQuery-->
+
+<script>
+  (function($) {
+
+/**
+* Copyright 2012, Digital Fusion
+* Licensed under the MIT license.
+* http://teamdf.com/jquery-plugins/license/
+*
+* @author Sam Sehnert
+* @desc A small plugin that checks whether elements are within
+*     the user visible viewport of a web browser.
+*     only accounts for vertical position, not horizontal.
+*/
+
+$.fn.visible = function(partial) {
+
+var $t            = $(this),
+$w            = $(window),
+viewTop       = $w.scrollTop(),
+viewBottom    = viewTop + $w.height(),
+_top          = $t.offset().top,
+_bottom       = _top + $t.height(),
+compareTop    = partial === true ? _bottom : _top,
+compareBottom = partial === true ? _top : _bottom;
+
+return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+
+};
+
+})(jQuery);
+
+var win = $(window);
+
+var allMods = $(".column, .column1, .header");
+
+allMods.each(function(i, el) {
+var el = $(el);
+if (el.visible(true)) {
+el.addClass("already-visible"); 
+} 
+});
+
+win.scroll(function(event) {
+
+allMods.each(function(i, el) {
+var el = $(el);
+if (el.visible(true)) {
+el.addClass("come-in"); 
+} 
+});
+
+});
+</script>
+
+<footer>
+  <!-- <img class="footer-logo" src="marketing.png" alt="Anthony Lewis Logo"> -->
+  <p class="copyright">Copyright Anthony Lewis 2023. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

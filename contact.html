@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="toggler.js">
+
+    <link rel="stylesheet" href="animate.js">
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $("#switch").click(function(){
+            $("#menu").toggle();
+          });
+        });
+        </script>
+        
+</head>
+<body>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script>
+
+    <!--Branding (Logo)-->
+
+    <img class="my-logo" src="marketing.png" alt="My Logo">
+
+    <!--Hidden Menu-->
+
+    <section class="side-section">
+      <div class="hidden">
+        <div id="menu-links" class="hide">
+          <h1 class="menu-h1"><a href="index.html">HOME</a></h1>
+          <h1 class="menu-h1"><a href="about.html">ABOUT</a></h1>
+          <h1 class="menu-h1"><a href="contact.html">CONTACT</a></h1>
+        </div>
+        <div class="menu-icon-div" style="height: 30px;">
+          <img id="lines" src="menu.png" alt="lines" onClick="main()">
+        </div>
+    </div>
+
+    <script>
+        var image_tracker = 'menu';
+  
+  <!--Menu Icon Changing Images-->
+  
+        function change() {
+          var image = document.getElementById('lines'); 
+          
+           if(image_tracker == 'menu') {
+              image.src='arrow.png';
+              image_tracker = 'arrow';
+            }
+              else {
+                image.src='menu.png';
+                image_tracker='menu';
+              }
+          } 
+  
+          const targetDiv = document.querySelector("#menu-links");
+          const isShow = true;
+      // const targetDiv = document.getElementById("menu-links");
+      // const img = document.getElementById("lines");
+      // function show() {
+      //   if (targetDiv.style.display !== "none") {
+      //     targetDiv.style.display = "none";
+      //   } else {
+      //     targetDiv.style.display = "block";
+      //   }
+      // };
+  
+      function show() {
+        targetDiv.classList.toggle("hide")
+      }
+  
+      function main() {
+          change();
+          show();
+        }
+    </script>
+    </section>
+
+    <!--Row of Images-->
+
+    <script>
+        $(document).ready(function(){
+          $(".btn1").click(function(){
+            $(".approach-image").slideUp();
+          });
+          $(".btn2").click(function(){
+            $(".approach-image").slideDown();
+          });
+        });
+        </script>
+
+<div class="container">
+  <div class="avatar">
+    <img class="banner-image1" src="banner-image1.jpg" alt="Business Office Image" style="" />
+   </div>
+</div>
+
+<div class="content">
+<div class="content-information">
+    <p class="contact-italicized"><i>Let's Make This Happen</i></p>
+    <h1 class="contact-h">Just Make Your Move With Us Without Hesitation</h1>
+    <p class="contact-p">We would love to hear from you.
+    </p>
+</div>
+
+<div class="content-information">
+    <h1 class="contact">Contact</h1><hr>
+    <h1 class="contact">Address</h1>
+    <p class="contact-p"> 6013 Hacienda Place, Suite 101<br>
+        Melbourne, FL 32940<br></p>
+    <h1 class="contact">Phone Number</h1>
+    <p class="contact-p">   1(866)-5555<p/><br>
+    <h1 class="contact">E-mail Address</h1>
+    <p class="contact-p">   Info@AnthonyLewis.com
+    </p>
+</div>
+</div>
+
+<div class="form">
+<form action="/submit-form" method="POST">
+  <label for="fname">First Name</label><br>
+  <input class="input" type="text" id="fname" name="fname" value="" required><br>
+  
+  <label for="lname">Last Name</label><br>
+  <input class="input" type="text" id="lname" name="lname" value="" required><br>
+  
+  <label for="email">Email</label><br>
+  <input class="input" type="email" required><br>
+  
+  <label for="text">Message</label><br>
+  <textarea name="textarea_name" rows="6" cols="22" placeholder="Enter your message here"></textarea><br>
+  <!-- Submit Button -->
+    <button class="contact-button" type="submit">Submit</button>
+</form>
+</div>
+
+
+<style>
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.banner-image1 {
+  width: 100%; 
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Century Gothic;
+}
+
+.form {
+  padding: 50px;
+  background-color: rgb(216, 213, 213);
+  padding-left: 10%;
+  width: 88%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 5%;
+}
+
+.contact-h {
+  width: 50%;
+}
+
+.content-information {
+  width: 40%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 10%;
+}
+
+hr {
+  width: 100px;
+}
+
+input {
+  width: 75%;
+  height: 30px;
+}
+
+.input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 75%;
+}
+
+textarea {
+  width: 75%;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+.button {
+  margin-top: 20px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: #eeeeee;
+  box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+}
+
+h1 {
+  font-size: 30px;
+  margin: 10px 0 0 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: #eeeeee;
+}
+
+p {
+  font-size: 20px;
+  font-weight: light;
+  color: #333333;
+}
+
+footer {
+  background-color: white;
+  color: black;  
+}
+
+.footer-logo {
+    width: 80px;
+    height: auto;
+}
+
+.copyright {
+    color: black;
+}
+
+@media (max-width: 799px) {
+  .content {
+    margin-left: 20%;
+  }
+}
+
+
+
+@media (max-width: 477px) {
+
+  .banner-image1 {
+    width: 100%;
+  }
+
+  .container {
+    width:120%; 
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+  }
+
+  form {
+    margin-left: 20%;
+  }
+
+  .content-information {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+</style>
+    <footer>
+  <p class="copyright">Copyright Anthony Lewis 2023. All Rights Reserved.</p>
+</footer>
+    
+  </body>
+  </html>
