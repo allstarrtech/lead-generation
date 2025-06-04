@@ -13,7 +13,7 @@
     cursor: pointer;
     /* top: 0; */
     position: absolute;
-    z-index: 100; 
+    z-index: 201; 
 }
 
 .hidden {
@@ -33,24 +33,31 @@
     padding-right: 20%;
     bottom: 0;
     height: 100%;
-    z-index: 100;
-    /* width: 80%;  */
+    position: fixed; /* or absolute */
+    top: 0;
+    left: 0;
+    /* width: 70%; */
+    z-index: 200; /* higher than 100 */
+
+    
 }
 
 .menu-h1 {
     font-size: 4vw;
     font-family: Century Gothic;
-    font-weight: 200;
+    font-weight: 100;
     padding-bottom: 20px;
 }
 
 .hide {
-    display: none;
+  display: none;
 }
 
 a {
     text-decoration: none;
     color: #000;
+    font-size: 5vw;
+    font-weight: 100;
 }
 
 /* unvisited link */
@@ -630,7 +637,13 @@ div .gap {
 }
 
 .guarantee {
-  background-image: url(banner-image2.jpg); margin-top: 150px; margin-bottom:   150px; height: 500px; background-size: cover; background-  repeat: no-repeat; width: 100%;
+  background-image: url(banner-image2.jpg); 
+  margin-top: 150px; 
+  margin-bottom: 150px; 
+  height: 500px; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  width: 100%;
   text-align: center;
   background-attachment: fixed;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -685,6 +698,7 @@ hr {
     flex: 50%;
     max-width: 50%;
   }
+}
 
 @media (max-width: 800px) {
   .column {
@@ -712,6 +726,10 @@ hr {
 }
 
 @media (max-width: 477px) {
+
+  #menu-links {
+    padding-top: 50px;
+  }
   .row {
     width: 100%;
     max-width: 100%;
@@ -730,4 +748,16 @@ hr {
      font-size: 4vw;
   }
 
+  .logo {
+    font-size: 25px;
+  }
+
+  .logo-p
+    {
+    font-size: 20px;
+  }
+
+  .my-logo {
+    width: 0;
+  }
 }
