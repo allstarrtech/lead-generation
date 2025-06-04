@@ -6,9 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lead Generation</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="toggler.js">
-
-    <link rel="stylesheet" href="animate.js">
+    <script src="toggler.js"></script>
+    <script src="animate.js"></script>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -30,19 +29,20 @@
 
     <img class="my-logo" src="marketing.png" alt="My Logo">
 
-    <!--Hidden Menu-->
+    <!-- Hamburger Button -->
+<div class="menu-icon-div">
+  <img id="lines" src="menu.png" alt="menu icon" onclick="main()">
+</div>
 
-    <section class="side-section">
-      <div class="hidden">
-        <div id="menu-links" class="hide">
-          <h1 class="menu-h1"><a href="index.html">HOME</a></h1>
-          <h1 class="menu-h1"><a href="about.html">ABOUT</a></h1>
-          <h1 class="menu-h1"><a href="contact.html">CONTACT</a></h1>
-        </div>
-        <div class="menu-icon-div" style="height: 30px;">
-          <img id="lines" src="menu.png" alt="lines" onClick="main()">
-        </div>
-    </div>
+<!-- Side Menu -->
+<section class="side-section" id="sideMenu">
+  <div id="menu-links" class="hide">
+
+    <h1><a href="index.html">HOME</a></h1>
+    <h1><a href="about.html">ABOUT</a></h1>
+    <h1><a href="contact.html">CONTACT</a></h1>
+  </div>
+</section>
 
     <script>
         var image_tracker = 'menu';
@@ -165,7 +165,7 @@ p {
   font-family: Century Gothic;
 }
 
-//.avatar {
+/* .avatar {
   width: 90%;
   height: 40%;
   margin-top: 80px;
@@ -176,7 +176,7 @@ p {
   box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
-}
+} */
 
 .about-image4:hover {
     transform: scale(1.5);
