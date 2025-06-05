@@ -41,6 +41,7 @@
     <h1><a href="index.html">HOME</a></h1>
     <h1><a href="about.html">ABOUT</a></h1>
     <h1><a href="contact.html">CONTACT</a></h1>
+    <h1><a href="mascot.html">MASCOT</a></h1>
   </div>
 </section>
 
@@ -104,27 +105,59 @@
   <div class="avatar">
       <img src="banner-image3.jpg" alt="Business Office Image" style="width:100%; height: 100%;" />
   </div>
+  
   <div class="content">
-    <h1>Mission</h1>
-    <p>Marketing Penguin is a business for organizations that want to succeed and are tired of working exhaustingly to find new leads while trying to run their company.</p>
-    <br>
-    <p>Obviously, the marketing landscape has changed dramatically over the last decade. Likewise, lead magnet generation has morphed as well.</p>
-    <br>
-    <p>Consequently, too many talented business owners are struggling because their business model is holding them back.</p>
-    <br>
-    <p>We are on a mission to fix this</p>
-    <br>
-    <p>Marketing Penguin is where we take all the concepts we have learned from the last decade in the industries and reveal what’s working now</p>
-    <br>
-    <h1>Discover Modern Corporations</h1>
-    <p>With Marketing Penguin, you get the step-by-step blueprint that transforms the old-school method into a result driven solution strategy. That way, you can focus solely on operating your company which is a lot in itself. Lead generation is a whole business on its own. That is where we come in.</p>
-    <br>
-    <p>Once you make this shift, We guarantee you will consistently land more clients.</p>
-</div>
+    <div class="diagonal">
+      <h1>Mission</h1>
+      <p>Anthony Lewis LLC is a business for organizations that want to succeed and are tired of working exhaustingly to find new leads while trying to run their company.</p>
+      <br>
+      <p>Obviously, the marketing landscape has changed dramatically over the last decade. Likewise, lead magnet generation has morphed as well.</p>
+      <br>
+      <p>Consequently, too many talented business owners are struggling because their business model is holding them back.</p>
+      <br>
+      <p>We are on a mission to fix this</p>
+      <br>
+      <p>Marketing Penguin is where we take all the concepts we have learned from the last decade in the industries and reveal what’s working now</p>
+      <br>
+    </div>
+    <div class="plain">
+      <h1>Discover Modern Corporations</h1>
+      <p>With Anthony Lewis LLC, you get the step-by-step blueprint that transforms the old-school method into a result driven solution strategy. That way, you can focus solely on operating your company which is a lot in itself. Lead generation is a whole business on its own. That is where we come in.</p>
+      <br>
+      <p>Once you make this shift, We guarantee you will consistently land more clients.</p>
+    </div>
+  </div>
 </div>
 
 <style>
 
+.diagonal, .plain {
+  padding-block: 5rem;
+}
+
+.diagonal, .plain {
+  
+  
+  padding-left: 10%;
+  padding-right: 10%;
+  transform: rotateY(-5deg);
+}
+
+.plain::after {
+  content: "";
+  background: steelblue;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(-5deg);
+  background-image: 
+    linear-gradient(
+      45deg,
+      #12c2e9,
+      #c471ed,
+      #f64f59
+    );
+}
 
 h1 {
   font-size: 30px;
@@ -183,8 +216,8 @@ p {
 }
 
 .content {
-  width: 60%;
-  padding: 20px 40px;
+  width: 100%;
+  /* padding: 20px 40px; */
   box-sizing: border-box;
 }
 
