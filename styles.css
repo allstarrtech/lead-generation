@@ -4,6 +4,8 @@
 
 /* Menu Styling */
 
+
+
 #lines {
     width: 50px;
     cursor: pointer;
@@ -502,7 +504,20 @@ div .gap {
     align-items: center;
     justify-content: center;
     padding: 10px;
+    background-color: lightgreen;
+    margin-top: 50px;
+     background-image: 
+    linear-gradient(
+      45deg,
+      #f8faf2,
+      #b8f3a4,
+      #83f7ac
+    );
   }
+
+  footer {
+  mask: conic-gradient(from 135deg at top,#0000,#000 1deg 89deg,#0000 90deg) 50%/20px 100%
+}
 
   .footer-logo {
     width: 90px;
