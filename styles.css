@@ -781,4 +781,8 @@ hr {
   .my-logo {
     width: 0;
   }
+
+  .teams {
+  clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
+  }
 }
