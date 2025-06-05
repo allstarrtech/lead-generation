@@ -505,7 +505,9 @@ div .gap {
     justify-content: center;
     padding: 10px;
     background-color: lightgreen;
-    margin-top: 50px;
+    margin-top: -10px;
+
+    /* Got this from YouTube (Spice up your site | Easy waves, angles, & other creative shapes with CSS Kevin Powell) */
      background-image: 
     linear-gradient(
       45deg,
@@ -669,6 +671,14 @@ div .gap {
   to {
     text-shadow: 0 0 20px #fff, 0 0 30px #4dff65, 0 0 40px #4dff74, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
+}
+
+.teams {
+  background: lightblue;
+
+  /* I got this from (https://bennettfeely.com/clippy/) which gives you the coordinates */
+  clip-path: polygon(0 43%, 100% 0%, 100% 100%, 0% 100%);
+  padding-block: 15rem;
 }
 
 .row {
