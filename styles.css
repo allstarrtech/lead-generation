@@ -738,6 +738,10 @@ hr {
   }
 }
 
+.teams {
+  clip-path: polygon(0 13%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media (max-width: 600px) {
   .column {
