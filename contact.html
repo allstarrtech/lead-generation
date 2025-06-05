@@ -43,6 +43,7 @@
     <h1><a href="index.html">HOME</a></h1>
     <h1><a href="about.html">ABOUT</a></h1>
     <h1><a href="contact.html">CONTACT</a></h1>
+    <h1><a href="mascot.html">MASCOT</a></h1>
   </div>
 </section>
 
@@ -119,12 +120,12 @@
 <div class="content-information">
     <h1 class="contact">Contact</h1><hr><br>
     <h1 class="contact">Address</h1>
-    <p class="contact-p"> 6013 Hacienda Place, Suite 101<br>
-        Melbourne, FL 32940</p><br>
+    <p class="contact-p"> 7901 4th St N STE 300<br>
+        St. Petersburg, FL 33702</p><br>
     <h1 class="contact">Phone Number</h1>
-    <p class="contact-p">   1(866)-5555</p><br>
+    <p class="contact-p">   1(407)-593-3881</p><br>
     <h1 class="contact">E-mail Address</h1>
-    <p class="contact-p">   Info@AnthonyLewis.com
+    <p class="contact-p">   AnthonyLewis@AnthonyLewis.site
     </p>
 </div>
 </div>
@@ -188,10 +189,19 @@ a {
 }
 
 .form {
-  padding: 50px;
+  padding: 100px;
   background-color: rgb(216, 213, 213);
   padding-left: 10%;
   width: 88%;
+
+  /* This is a top and bottom wavy pattern on the form from https://css-generators.com/wavy-shapes/ */
+  --mask:
+    radial-gradient(34.99px at 50% 48px,#000 99%,#0000 101%) calc(50% - 60px) 0/120px 51% repeat-x,
+    radial-gradient(34.99px at 50% -18px,#0000 99%,#000 101%) 50% 30px/120px calc(51% - 30px) repeat-x,
+    radial-gradient(34.99px at 50% calc(100% - 48px),#000 99%,#0000 101%) calc(50% - 60px) 100%/120px 51% repeat-x,
+    radial-gradient(34.99px at 50% calc(100% + 18px),#0000 99%,#000 101%) 50% calc(100% - 30px)/120px calc(51% - 30px) repeat-x;
+  -webkit-mask: var(--mask);
+          mask: var(--mask);
 }
 
 .content {
