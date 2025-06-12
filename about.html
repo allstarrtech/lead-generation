@@ -7,7 +7,235 @@
     <title>Lead Generation</title>
     <link rel="stylesheet" href="styles.css">
     <script src="toggler.js"></script>
+    <script src="animate.js"></script><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Generation</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="toggler.js"></script>
     <script src="animate.js"></script>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $("#switch").click(function(){
+            $("#menu").toggle();
+          });
+        });
+        </script>
+        
+</head>
+<body>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+    </script>
+
+    <!--Branding (Logo)-->
+
+    <img class="my-logo" src="marketing.png" alt="My Logo">
+
+    <!-- Hamburger Button -->
+<div class="menu-icon-div">
+  <img id="lines" src="menu.png" alt="menu icon" onclick="main()">
+</div>
+
+<!-- Side Menu -->
+<section class="side-section" id="sideMenu">
+  <div id="menu-links" class="hide">
+
+    <h1><a href="index.html">HOME</a></h1>
+    <h1><a href="about.html">ABOUT</a></h1>
+    <h1><a href="benefits.html">BENEFITS</a></h1>
+    <h1><a href="contact.html">CONTACT</a></h1>
+    <h1><a href="mascot.html">MASCOT</a></h1>
+  </div>
+</section>
+
+    <script>
+        var image_tracker = 'menu';
+  
+  <!--Menu Icon Changing Images-->
+  
+        function change() {
+          var image = document.getElementById('lines'); 
+          
+           if(image_tracker == 'menu') {
+              image.src='arrow.png';
+              image_tracker = 'arrow';
+            }
+              else {
+                image.src='menu.png';
+                image_tracker='menu';
+              }
+          } 
+  
+          const targetDiv = document.querySelector("#menu-links");
+          const isShow = true;
+      // const targetDiv = document.getElementById("menu-links");
+      // const img = document.getElementById("lines");
+      // function show() {
+      //   if (targetDiv.style.display !== "none") {
+      //     targetDiv.style.display = "none";
+      //   } else {
+      //     targetDiv.style.display = "block";
+      //   }
+      // };
+  
+      function show() {
+        targetDiv.classList.toggle("hide")
+      }
+  
+      function main() {
+          change();
+          show();
+        }
+    </script>
+    </section>
+
+    <!--Row of Images-->
+
+    <script>
+        $(document).ready(function(){
+          $(".btn1").click(function(){
+            $(".approach-image").slideUp();
+          });
+          $(".btn2").click(function(){
+            $(".approach-image").slideDown();
+          });
+        });
+        </script>
+        
+        <body>
+
+<div class="container">
+  <div class="avatar">
+      <img src="images/banner-image3.jpg" alt="Business Office Image" style="width:100%; height: 100%;" />
+  </div>
+  
+  <div class="content">
+    <div class="diagonal">
+      <h1>Mission</h1>
+      <p>Anthony Lewis LLC is a business for organizations that want to succeed and are tired of working exhaustingly to find new leads while trying to run their company.</p>
+      <br>
+      <p>Obviously, the marketing landscape has changed dramatically over the last decade. Likewise, lead magnet generation has morphed as well.</p>
+      <br>
+      <p>Consequently, too many talented business owners are struggling because their business model is holding them back.</p>
+      <br>
+      <p>We are on a mission to fix this.</p>
+      <br>
+      <p>Anthony Lewis LLC is where we take all the concepts we have learned from the last decade in the industries and reveal what’s working now</p>
+      <br>
+    </div>
+    <div class="plain">
+      <h1>Discover Modern Corporations</h1>
+      <p>With Anthony Lewis LLC, you get the step-by-step blueprint that transforms the old-school method into a result driven solution strategy. That way, you can focus solely on operating your company which is a lot in itself. Lead generation is a whole business on its own. That is where we come in.</p>
+      <br>
+      <p>Once you make this shift, We guarantee you will consistently land more clients.</p>
+    </div>
+  </div>
+</div>
+
+<style>
+
+.diagonal, .plain {
+  padding-block: 5rem;
+}
+
+.diagonal, .plain {
+  
+  
+  padding-left: 10%;
+  padding-right: 10%;
+  transform: rotateY(-5deg);
+}
+
+.plain::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(-5deg);
+  background-image: 
+    linear-gradient(
+      45deg,
+      #12c2e9,
+      #c471ed,
+      #f64f59
+    );
+}
+
+h1 {
+  font-size: 30px;
+  margin: 10px 0 0 0;
+  font-weight: lighter;
+  text-transform: uppercase;
+  color: gray;
+}
+
+p {
+  font-size: 20px;
+  font-weight: light;
+  color: #333333;
+}
+
+@keyframes float {
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+    transform: translatey(0px);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Century Gothic;
+}
+
+.about-image4:hover {
+    transform: scale(1.5);
+}
+
+.content {
+  width: 100%;
+  /* padding: 20px 40px; */
+  box-sizing: border-box;
+}
+
+footer {
+    margin-top: 50px;
+    background: white;
+}
+
+@media (max-width: 799px) {
+  .content {
+    width: 80%;
+  }
+}
+
+</style>
+
+<footer>
+    <p class="copyright">Copyright Anthony Lewis 2023. All Rights Reserved.</p>
+  </footer>
+    
+  </body>
+  </html>
     
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
