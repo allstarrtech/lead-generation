@@ -121,19 +121,19 @@ h1 {
 
  @keyframes images {
     0% {
-        background-image: url(banner-image4.jpg);
+        background-image: url(images/banner-image4.jpg);
     }
     25% {
-        background-image: url(banner-image4.jpg);
+        background-image: url(images/banner-image4.jpg);
     }
     35% {
-        background-image: url(banner-image5.jpg);
+        background-image: url(images/banner-image5.jpg);
     }
     50% {
-        background-image: url(banner-image5.jpg);
+        background-image: url(images/banner-image5.jpg);
     }
     100% {
-        background-image: url(banner-image6.jpg);
+        background-image: url(images/banner-image6.jpg);
     }
   }
 
@@ -234,6 +234,7 @@ h1 {
 
     .copyright {
       margin-left: 20px;
+      font-family: Century Gothic;
     }
   }
 
